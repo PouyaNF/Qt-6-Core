@@ -1,14 +1,20 @@
 /*
 
-  What
   UTF16
+	UTF-16 is a character encoding that represents Unicode characters using one or two 16-bit code units.
+	In UTF-16, the first 65,536 characters (known as the Basic Multilingual Plane, BMP) are encoded using 
+	a single 16-bit unit, while characters outside this range, which include many additional scripts and 
+	symbols, are encoded using a pair of 16-bit units known as a surrogate pair. This allows UTF-16 to
+	efficiently represent a wide array of characters from different languages and symbol sets while maintaining
+	a balance between space efficiency and ease of use. While UTF-16 can handle most common characters in 
+	modern applications, it may not be as compact as UTF-8 for texts primarily in ASCII or for languages that 
+	predominantly use characters within the BMP.
 
-  Why
-  We want one or two 16-bit code units
 
   How
   UTF-16 is a character encoding capable of encoding all 1,112,064 non-surrogate code points of Unicode.
   The encoding is variable-length, as code points are encoded with one or two 16-bit code units
+  
 
  */
 
