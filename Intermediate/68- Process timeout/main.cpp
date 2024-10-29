@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     QProcess proc;
-    proc.start("xed");
+    proc.start("xed"); //  launches the xed text editor. If xed is available in the system's PATH, it will open the application.
 
     QTimer::singleShot(3000,&proc,&QProcess::terminate);
 

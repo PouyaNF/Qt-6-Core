@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 
     qInfo() << "Copying...";
     list2.resize(list1.size());
+	
+	// Copies all elements from list1 to list2. The iterators list1.begin() and list1.end()
     std::copy(list1.begin(),list1.end(),list2.begin());
     qInfo() << "Equal:" << std::equal(list1.begin(),list1.end(),list2.begin());
 

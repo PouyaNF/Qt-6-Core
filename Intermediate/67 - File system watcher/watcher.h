@@ -1,3 +1,11 @@
+/*
+This code defines a Watcher class that uses Qt's QFileSystemWatcher to monitor changes in the file system,
+specifically tracking changes to files and directories. 
+ 
+*/
+
+
+
 #ifndef WATCHER_H
 #define WATCHER_H
 

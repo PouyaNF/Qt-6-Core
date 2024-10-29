@@ -40,11 +40,13 @@ int main(int argc, char *argv[])
     qInfo() << list1;
     qInfo() << list2;
 
-    //qInfo() << "Equal: " << qEqual(list1.begin(), list1.end(), list2.begin());
-    qInfo() << "Equal: " << std::equal(list1.begin(), list1.end(), list2.begin());
+    //Since both lists contain the same values (9), this comparison will return true.
+    qInfo() << "Equal: " << std::equal(list1.begin(), list1.end(), list2.begin()); 
 
     list1.fill(9);
     list2.fill(9);
+	
+	
     qInfo() << list1;
     qInfo() << list2;
 

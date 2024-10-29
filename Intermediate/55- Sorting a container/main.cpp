@@ -1,5 +1,4 @@
 /*
-
   What
   Sorting a container
 
@@ -19,10 +18,10 @@
 
 void randoms(QList<int> *list, int max)
 {
-    list->reserve(max);
+    list->reserve(max); // This pre-allocates space for max elements in the QList to optimize performance. By reserving memory in advance, the list won't need to repeatedly resize as elements are appended.
     for(int i = 0; i < max; i++)
     {
-        int value = QRandomGenerator::global()->bounded(1000);
+        int value = QRandomGenerator::global()->bounded(1000); // QRandomGenerator::global() method returns a globally available random number generator
         list->append(value);
     }
 }
@@ -38,9 +37,11 @@ int main(int argc, char *argv[])
 
     //qSort - do not use
 
+	// This uses the C++ standard library function std::sort() to sort the list in ascending order.
     std::sort(list.begin(),list.end());
     qInfo() << "Sorted:" << list;
 
+	// This reverses the order of the elements in the list. 
     std::reverse(list.begin(),list.end());
     qInfo() << "Reversed:" << list;
 

@@ -1,15 +1,11 @@
 /*
 
-  What
-  Concurrent
+  QtConcurrent is a high-level API in Qt designed to simplify running parallel
+  tasks without directly managing threads. It allows you to run tasks concurrently 
+  and provides easy access to multi-core processing capabilities. QtConcurrent 
+  abstracts away the complexity of thread management by automatically managing
+  a pool of threads and handling the details of scheduling and execution.
 
-  Why
-  Threading is hard and we just want to run code
-
-  How
-  QtConcurrent
-  This uses QThreadpool for us
-  Not returning values and all that stuff is in the advanced course
 
  */
 

@@ -31,14 +31,16 @@ int main(int argc, char *argv[])
 
     qInfo() << list.at(0);
 
-    qDeleteAll(list);
-    qInfo() << "Count: " << list.count();
+	// Deletes all the objects pointed to by the pointers in the list. 
+    qDeleteAll(list); // It prevents memory leaks by releasing the memory allocated with new.
+	
+    qInfo() << "Count: " << list.count(); //  After qDeleteAll, this count will still be 10 because deleting the objects does not remove them from the list.
 
    // qInfo() << list.at(0); //Will crash
     qInfo() << "Clearing...";
-    list.clear();
+    list.clear(); // Clears the list. This removes all elements from the list, leaving it empty. 
 
-    qInfo() << "Count: " << list.count();
+    qInfo() << "Count: " << list.count(); // should now be 0 since the list was cleared
 
     return a.exec();
 }

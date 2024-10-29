@@ -12,7 +12,7 @@ Task::~Task()
 
 void Task::run()
 {
-    QThread *thread = QThread::currentThread();
+    QThread *thread = QThread::currentThread(); 
 
     qInfo() << "Starting" << thread;
     for(int i = 0; i < 10; i++)
